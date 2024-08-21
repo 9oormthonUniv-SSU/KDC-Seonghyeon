@@ -1,0 +1,7 @@
+version: '3.0'
+
+services:
+  lotto:
+    image: chosh040/django-lotto
+    ports:
+      - "8000:8000"
