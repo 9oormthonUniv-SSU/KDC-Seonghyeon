@@ -3,8 +3,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-  
-  return HttpResponse("<h1>Hello, world!</h1>")
+  return render(request, 'lotto/default.html', {})
+
 
 def hello(request):
   return HttpResponse("<h1 style='color:red;'>Hello, Django!</h1>")
