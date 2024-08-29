@@ -11,14 +11,14 @@
 </head>
 <body>
 <div class="page-header">
-<h1>Selected Lotto Numbers</h1>
+<h1>Generate your new lotto numbers!</h1>
 </div>
 <div class="container lotto">
-  {% for lotto in lottos %}
-  <h2>{{ lotto.text }}</h2>
-  <p>{{ lotto.update_date }}</p>
-  <p>{{ lotto.lottos | linebreaksbr }}</p>
-  {% endfor %}
+<form method="POST" class="post-form">
+{% csrf_token %} <!-- CSRF (Cross Site Request Forgery) 공격 방지를 위한 Token 생성 -->
+{{ form.as_p }} <!-- form을 p 태그로 감싸서 출력 -->
+<button type="submit" class="save btn btn-default">Save</button>
+</form>
 </div>
 </body>
 </html>

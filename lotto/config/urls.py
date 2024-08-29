@@ -23,4 +23,5 @@ urlpatterns = [
     # path('', views.index),
     path('hello/', views.hello, name='hello_main'),
     path('lotto/', views.index, name='index'),
+    path('lotto/new', views.post, name = "new_lotto"),
 ]
